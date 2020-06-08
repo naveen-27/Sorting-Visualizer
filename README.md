@@ -11,4 +11,4 @@ If you want to locally run this
               1) make sure to clone/download the repository
               2) open index.html using a localhost server
 
-/* Currently Bubble Sort, Insertion Sort and Selection Sort are available */
+/* Currently Bubble Sort, Insertion Sort and Selection Sort are featured */
