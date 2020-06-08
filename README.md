@@ -4,7 +4,7 @@ Fascinated by sorting algorithms and their humongous part in almost every softwa
 
 An integer array that keeps manipulating one step a time dictated as per user convenience is a major highlight.
 
-Go Play Around With It -> https://naveen-27.github.io
+Go Play Around With It -> https://naveen-27.github.io \n
 Use Google Chrome (or) Mozilla Firefox from a desktop computer.
 
 If you want to locally run this
