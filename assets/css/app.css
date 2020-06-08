@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Patua+One&family=Roboto:wght@400;500&family=Source+Code+Pro:wght@600&display=swap');
+
+
+:root {
+    --primary: #243E8E;
+    --border: rgba(20, 71, 226, 0.479);
+    --main-background: rgba(165, 225, 228, 0.432);
+
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* "NAVBAR" starts */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 5px 3%;
+    background-color: #243E8E;
+}
+
+.sorts {  /* The sorting options List*/
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+.sorts li{  /* Each sort option */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding-right: 25px;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+label {  /* Label for the range input */
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+/* Custom Input range styles */
+input {
+    margin: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100px;
+    height: 5px;
+    outline: none;
+}
+
+input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: yellowgreen;
+}
+
+input::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: yellowgreen;
+}
+
+.hover {  /* The class to add to sort options during "mouseout" and "mouseover" events */
+    opacity: 0.80;
+}
+
+.selected {  /* Class to add when a sorting option is selected */
+    text-shadow: 0 0 5px yellowgreen;
+}
+/* "NAVBAR" ends */
+
+
+/* The Main Container below the navbar starts */
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* The Left Pane (Sorting Area) (Sorting Area) starts */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Command Line like Heading */
+.heading { 
+    margin-bottom: 70px;
+    padding: 0;
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 3rem;
+
+    border-right: 5px solid yellowgreen;
+    color: #2D40BE;
+}
+
+/* The array of values */
+.array { 
+    display: grid;
+    border: 3px solid var(--border);
+    background-color: var(--main-background)
+}
+
+/* Each value in the array */
+.element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30%; 
+
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+    color: #0000FF;
+
+    transition: all 400ms linear;
+}
+
+.highlighted {  /* To set out current element from others (highlight current element) */
+    background-color: rgba(218, 165, 32, 0.548);
+    opacity: 0.80;
+}
+
+.small {  /* Current smallest element in selection sort */
+    background-color: rgba(255, 192, 203, 0.753);
+}
+
+.sorted {  /* element/ array sorted => should turn to green */
+    background-color: rgba(153, 214, 31, 0.466) !important;
+}
+
+/* The Guide area below array */
+.guide-text {
+    margin: 40px 0;
+    padding: 10px 20px;
+    width: 260px;
+    border: 3px solid var(--border);
+    background-color: var(--main-background);
+    border-radius: 20px;
+}
+
+.guide-text p {
+    font-family: "Patua One", sans-serif;
+    color: rgba(0, 0, 0, 0.692);
+    font-size: 14px;
+    font-weight: 400;
+
+    border-left: 3px solid rgba(0, 0, 255, 0.685);
+    padding-left: 5px;
+}
+
+/* Next button */
+button {
+    padding: 10px 40px;
+    background-color: rgba(20, 71, 226, 0.767);
+    font-family: "Patua One", sans-serif;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+}
+
+button:hover {
+    opacity: 0.90;
+}
+
+button:active {
+    transform: translate(1px, 1px);
+}
+
+.helper {  /* The Color Guide */
+    padding-top: 3em;
+    display: flex;
+    grid-gap: 5px;
+    width: 45%;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    color: rgba(20, 71, 226, 0.767);
+}
+
+.helper b {
+    padding: 10px;
+    text-align: center;
+    flex-basis: 30%;
+}
+
+#a {
+    background-color: rgba(218, 165, 32, 0.548);
+}
+
+#b {
+    background-color: rgba(255, 192, 203, 0.753);
+    margin: 0 5px;
+}
+
+#c {
+    background-color: rgba(153, 214, 31, 0.466);
+}
+/* The Left Pane (Sorting Area) ends */
+
+
+/* The Description Box starts */
+.description {
+    display: flex;
+    align-items: center;
+    width: 35%;
+}
+
+.box {  /* The blue box which holds the description */
+    padding: 50px 35px;
+    width: 20vw;
+    background-color: var(--main-background);
+
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    font-family: "Patua One", sans-serif;
+}
+
+.box h2, 
+.box span {
+    color: #00768F;
+}
+
+.box h2 {
+    margin-bottom: 30px;
+}
+
+.box a {
+    color: #00768F;
+    text-decoration: none;
+}
+
+.box p {
+    color: rgba(0, 0, 0, 0.692);
+    line-height: 1.5;
+    padding-right: 15px;
+}
+
+.box a:hover {  /* Algorithm Heading */
+    text-decoration: underline;
+}
+
+.box span {  /* Complexities */
+    margin-top: 20px;
+    display: block;
+}
+
+.box p {
+    font-size: 13px;
+    font-weight: 400;
+}
+/* The Description Box ends */
+/* The Container ends */

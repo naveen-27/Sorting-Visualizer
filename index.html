@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <!-- Boilerplate -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Logo of the page (Favicon) -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/logo.png"/>
+
+    <!-- Stylesheets used -->
+    <link rel="stylesheet" href="./assets/css/app.css">  <!-- Main Stylesheet -->
+
+    <title>Sorting Visualizer</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <!-- The sorting options -->
+        <ul class="sorts">
+            <li id="bubble">BUBBLE&nbsp;SORT</li>
+            <li id="insertion">INSERTION&nbsp;SORT</li>
+            <li id="selection">SELECTION&nbsp;SORT</li>
+            <!-- <li id="merge">MERGE&nbsp;SORT</li>
+            <li id="quick">QUICK&nbsp;SORT</li> -->
+        </ul>
+
+        <!-- Range input for selecting array size -->
+        <label for="size">ARRAY SIZE
+            <input type="range" name="length" id="size" min="4" max="10" value="6">
+        </label>
+    </nav>
+
+    <!-- Div that contains both the main and sorting areas -->
+    <div class="container">
+
+        <!-- The sorting Visualizer area -->
+        <div class="main">
+            <h1 class="heading">$&nbsp;./<span>sort</span></h1>
+            <div class="array"></div>
+            <div class="guide-text">
+                <p>Start the sort!</p>
+            </div>
+            <button>NEXT</button>
+
+            <p class="helper"><b id='a'>Current Element</b><b id='b'>Smallest Element</b><b id='c'>Sorted</b></p>
+        </div>
+
+        <!-- The description area -->
+        <div class="description">
+            <div class="box">
+                <h2>Select Algorithm</h2>
+                <p></p>
+                <span id="time"></span>
+                <span id="space"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- The scripts used -->
+    <script src="./assets/JavaScript/index.js"></script>  <!-- The Main script for index page -->
+    <script type="module" src="./assets/JavaScript/load-algorithm.js"></script>  <!-- The dynamically algorithm executing module -->
+</body>
+</html>
