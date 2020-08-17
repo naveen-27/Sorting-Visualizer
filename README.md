@@ -8,7 +8,7 @@ Go Play Around With It -> https://naveen-27.github.io
 Use Google Chrome (or) Mozilla Firefox from a desktop computer.
 
 If you want to locally run this
-              1) make sure to clone/download the repository
-              2) open index.html using a localhost server
+1. make sure to clone/download the repository
+2. open index.html using a localhost server
 
 /* Currently Bubble Sort, Insertion Sort and Selection Sort are featured */
